@@ -4,14 +4,16 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 #profile {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
 }
 
 #profile>div {
@@ -19,8 +21,8 @@ header .container {
 }
 
 #profile img {
-    width: 176px;
-    height: 176px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -46,4 +48,18 @@ header .container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+@media (width >=48em) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (width >=64em) {
+    #profile {
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
